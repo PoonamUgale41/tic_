@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1> Guess the Number</h1>
+
+    <div class="controls">
+        <label>Select Difficulty:</label>
+        <select id="difficulty" onchange="setDifficulty()">
+            <option value="easy">Easy (1-50)</option>
+            <option value="medium" selected>Medium (1-100)</option>
+            <option value="hard">Hard (1-200)</option>
+        </select>
+    </div>
+
+    <p id="rangeText">Guess a number between 1 and 100</p>
+
+    <input type="number" id="guessInput" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Guess</button>
+
+    <p id="message"></p>
+    <p id="attempts"></p>
+    <p id="timer"> Time: 0s</p>
+    <p id="score">🏆 Score: 0</p>
+
+    <button class="restart" onclick="restartGame()">Restart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
